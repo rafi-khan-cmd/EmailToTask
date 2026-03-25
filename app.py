@@ -19,23 +19,32 @@ from src.config import get_sample_data_paths
 
 
 def _auto_seed_if_empty() -> None:
-    if st.session_state.get("_auto_seed_done"):
+    status = st.session_state.get("_auto_seed_status")
+    if status in {"seeded", "not_needed"}:
         return
-    st.session_state["_auto_seed_done"] = True
     try:
         existing = get_all_tasks(limit=1)
         if existing:
+            st.session_state["_auto_seed_status"] = "not_needed"
             return
         _, sample_json_path = get_sample_data_paths()
         if not sample_json_path.exists():
+            st.session_state["_auto_seed_status"] = "missing_sample_file"
             return
         emails = load_emails_from_json(sample_json_path.read_bytes())
         if not emails:
+            st.session_state["_auto_seed_status"] = "empty_samples"
             return
-        process_emails(emails, extraction_method="rule_based")
+        result = process_emails(emails, extraction_method="rule_based")
+        if result.errors:
+            st.session_state["_auto_seed_status"] = "seed_error"
+            st.sidebar.warning("Sample preload partially failed. Use Upload Emails -> Load Sample Dataset.")
+            return
+        st.session_state["_auto_seed_status"] = "seeded"
         st.sidebar.success("Sample data preloaded.")
     except Exception:
-        # Keep startup resilient even if sample preloading fails.
+        # Keep startup resilient and retry on later reruns.
+        st.session_state["_auto_seed_status"] = "seed_error"
         return
 
 

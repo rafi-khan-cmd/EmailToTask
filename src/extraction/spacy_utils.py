@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import importlib
+import os
 import sys
 from functools import lru_cache
 
@@ -40,6 +41,16 @@ def get_nlp_model() -> Any:
                 return pkg.load()
         except Exception:
             pass
+        # Last attempt: auto-download model unless explicitly disabled.
+        auto_download_disabled = os.getenv("EMAIL_TO_TASK_DISABLE_SPACY_AUTO_DOWNLOAD", "0").strip() == "1"
+        if not auto_download_disabled:
+            try:
+                from spacy.cli import download as spacy_download
+
+                spacy_download(SPACY_MODEL_NAME)
+                return spacy.load(SPACY_MODEL_NAME)
+            except Exception:
+                pass
         raise SpacyModelLoadError(
             "spaCy English model is missing for this Python environment.\n"
             f"Python executable in use: {sys.executable}\n"
