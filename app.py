@@ -5,13 +5,38 @@ from __future__ import annotations
 import streamlit as st
 
 from src.config import EXTRACTOR_OPTIONS, EXTRACTOR_SPACY, get_default_extractor_method
+from src.db.repository import get_all_tasks
 from src.extraction.factory import resolve_extractor_method
 from src.extraction.spacy_utils import is_spacy_model_available
+from src.ingestion.loaders import load_emails_from_json
+from src.services.processing_service import process_emails
 from src.ui.dashboard import render_dashboard_page
 from src.ui.task_table import render_tasks_page
 from src.ui.task_detail import render_task_detail_page
 from src.ui.upload_page import render_upload_page
 from src.ui.dashboard import render_analytics_page
+from src.config import get_sample_data_paths
+
+
+def _auto_seed_if_empty() -> None:
+    if st.session_state.get("_auto_seed_done"):
+        return
+    st.session_state["_auto_seed_done"] = True
+    try:
+        existing = get_all_tasks(limit=1)
+        if existing:
+            return
+        _, sample_json_path = get_sample_data_paths()
+        if not sample_json_path.exists():
+            return
+        emails = load_emails_from_json(sample_json_path.read_bytes())
+        if not emails:
+            return
+        process_emails(emails, extraction_method="rule_based")
+        st.sidebar.success("Sample data preloaded.")
+    except Exception:
+        # Keep startup resilient even if sample preloading fails.
+        return
 
 
 def main() -> None:
@@ -43,6 +68,8 @@ def main() -> None:
             "spaCy model not found. Falling back to rule_based. Run: "
             "`python -m spacy download en_core_web_sm`"
         )
+
+    _auto_seed_if_empty()
 
     page = st.sidebar.radio(
         "Navigation",
