@@ -1,0 +1,227 @@
+[
+  {
+    "id": "email_001",
+    "sender": "Jordan Lee <jordan@acme.com>",
+    "subject": "Weekly report",
+    "body": "Hi team. Please send the report by Friday. Include the latest KPI dashboard and highlight any risks. Thanks, Jordan.",
+    "received_at": "2026-03-18T10:00:00"
+  },
+  {
+    "id": "email_002",
+    "sender": "Priya Singh <priya@northwind.com>",
+    "subject": "Board slides",
+    "body": "Reminder: finish the slides ASAP for the board meeting. We'll review today at 9 AM. Please reply when done.",
+    "received_at": "2026-03-22T09:30:00"
+  },
+  {
+    "id": "email_003",
+    "sender": "Miguel Santos <miguel@contoso.com>",
+    "subject": "Client invoice",
+    "body": "Please send the invoice immediately. The client needs it today and expects delivery by end of day. Let me know once it's sent.",
+    "received_at": "2026-03-24T14:20:00"
+  },
+  {
+    "id": "email_004",
+    "sender": "Ava Chen <ava@paperplane.io>",
+    "subject": "Contract review",
+    "body": "Can you review the contract by tomorrow? If anything looks off, reply with comments and proposed edits.",
+    "received_at": "2026-03-23T16:45:00"
+  },
+  {
+    "id": "email_005",
+    "sender": "Noah Brooks <noah@brightco.com>",
+    "subject": "Budget spreadsheet update",
+    "body": "Update the spreadsheet before noon so we can finalize the budget. If assumptions change, flag them in the notes column.",
+    "received_at": "2026-03-23T08:15:00"
+  },
+  {
+    "id": "email_006",
+    "sender": "Company News <news@company.com>",
+    "subject": "Q1 company news",
+    "body": "This is an informational update about Q1 priorities and internal changes. No action is required. Enjoy the rest of your week.",
+    "received_at": "2026-03-20T12:00:00"
+  },
+  {
+    "id": "email_007",
+    "sender": "Emma Watson <emma@stonepeak.co>",
+    "subject": "Project alignment meeting",
+    "body": "Let's schedule a meeting next Monday to align on the project plan. Please share your availability windows.",
+    "received_at": "2026-03-20T13:05:00"
+  },
+  {
+    "id": "email_008",
+    "sender": "Liam Patel <liam@kepler.ai>",
+    "subject": "Draft deck for review",
+    "body": "Take a look when you get a chance. I've attached the latest draft deck and would appreciate any feedback on the narrative flow.",
+    "received_at": "2026-03-21T11:10:00"
+  },
+  {
+    "id": "email_009",
+    "sender": "Sophia Martinez <sophia@horizonlogistics.com>",
+    "subject": "Reimbursement form",
+    "body": "Please complete the reimbursement form by Friday end of day. Submit receipts as PDFs and double-check the expense categories.",
+    "received_at": "2026-03-19T15:40:00"
+  },
+  {
+    "id": "email_010",
+    "sender": "Daniel Kim <daniel@atlasforms.com>",
+    "subject": "Client follow-up",
+    "body": "Follow up with the client ASAP regarding the contract status. We need an answer by tomorrow afternoon so we can proceed with next steps.",
+    "received_at": "2026-03-22T18:05:00"
+  },
+  {
+    "id": "email_011",
+    "sender": "Olivia Hart <olivia@bayside.edu>",
+    "subject": "Training confirmation",
+    "body": "Reply to this email today to confirm attendance for the training session. We'll send the agenda once you confirm.",
+    "received_at": "2026-03-25T07:20:00"
+  },
+  {
+    "id": "email_012",
+    "sender": "Ethan Wright <ethan@harborit.com>",
+    "subject": "Onboarding paperwork",
+    "body": "Submit the onboarding form tomorrow morning. If you run into issues, reply with a screenshot or a quick description.",
+    "received_at": "2026-03-24T09:10:00"
+  },
+  {
+    "id": "email_013",
+    "sender": "Mia Hernandez <mia@opsline.com>",
+    "subject": "Operations check-in",
+    "body": "Could you schedule a check-in next week with the operations team? Aim for 30 minutes and include an update on blockers.",
+    "received_at": "2026-03-18T08:40:00"
+  },
+  {
+    "id": "email_014",
+    "sender": "Grace Turner <grace@lumenpay.com>",
+    "subject": "Invoice delivery",
+    "body": "Enjoy the weekend. Please send the invoice by Monday. Thank you for getting this over the line.",
+    "received_at": "2026-03-21T10:25:00"
+  },
+  {
+    "id": "email_015",
+    "sender": "Ryan Foster <ryan@vertexcreative.com>",
+    "subject": "Executive summary slides",
+    "body": "Please prepare the slides for the executive summary by end of week. Keep it to 8 bullets and include a short takeaway.",
+    "received_at": "2026-03-15T11:00:00"
+  },
+  {
+    "id": "email_016",
+    "sender": "Chloe Nguyen <chloe@securekart.com>",
+    "subject": "Hotfix needed",
+    "body": "Urgent: fix the login issue immediately. Let me know once the hotfix is deployed and monitoring looks stable.",
+    "received_at": "2026-03-17T17:20:00"
+  },
+  {
+    "id": "email_017",
+    "sender": "Benjamin Clark <ben@northbridge.io>",
+    "subject": "Proposal feedback",
+    "body": "Can you review the draft proposal next Friday and share feedback on the pricing section? Thanks in advance.",
+    "received_at": "2026-03-18T09:50:00"
+  },
+  {
+    "id": "email_018",
+    "sender": "Zoe Thompson <zoe@dataforge.com>",
+    "subject": "Spreadsheet adjustments",
+    "body": "Update the spreadsheet by noon and flag any assumptions that need confirmation.",
+    "received_at": "2026-03-23T10:05:00"
+  },
+  {
+    "id": "email_019",
+    "sender": "Oliver Scott <oliver@brightworks.co>",
+    "subject": "Kickoff call",
+    "body": "Let's schedule the kickoff call for next Tuesday. Please send your availability windows for that day.",
+    "received_at": "2026-03-20T12:30:00"
+  },
+  {
+    "id": "email_020",
+    "sender": "Grace Wilson <grace@paperplane.io>",
+    "subject": "Board pack items",
+    "body": "Please send the report and review the summary by Friday. We'll compile everything into the board pack and circulate it internally.",
+    "received_at": "2026-03-18T14:25:00"
+  },
+  {
+    "id": "email_021",
+    "sender": "Henry Adams <henry@teamflow.com>",
+    "subject": "Onboarding checklist",
+    "body": "Complete the onboarding checklist. Ideally by tomorrow so we can start the trial and set up access.",
+    "received_at": "2026-03-23T13:15:00"
+  },
+  {
+    "id": "email_022",
+    "sender": "Isabella Reed <isabella@bayside.edu>",
+    "subject": "Survey response",
+    "body": "Reminder: reply to the survey today if possible. It should only take 2 minutes to submit your answers.",
+    "received_at": "2026-03-25T08:05:00"
+  },
+  {
+    "id": "email_023",
+    "sender": "Jack Turner <jack@webinarly.com>",
+    "subject": "Webinar attendance",
+    "body": "Confirm attendance by 3 PM tomorrow. If you can't make it, send an alternative time.",
+    "received_at": "2026-03-22T12:50:00"
+  },
+  {
+    "id": "email_024",
+    "sender": "Calendar Bot <calendar@company.com>",
+    "subject": "Meeting notes attached",
+    "body": "FYI: the meeting notes from last week are attached. No action is required at this time.",
+    "received_at": "2026-03-14T09:00:00"
+  },
+  {
+    "id": "email_025",
+    "sender": "Carla Diaz <carla@lumenpay.com>",
+    "subject": "Client call availability",
+    "body": "Please reply immediately with your availability for a quick client call. Tomorrow works if you're free between 10 AM and 1 PM.",
+    "received_at": "2026-03-22T16:10:00"
+  },
+  {
+    "id": "email_026",
+    "sender": "Mark Brooks <mark@opsline.com>",
+    "subject": "Procurement request",
+    "body": "Submit the procurement request by end of week. We'll process it as soon as it arrives.",
+    "received_at": "2026-03-10T10:10:00"
+  },
+  {
+    "id": "email_027",
+    "sender": "Nora Powell <nora@horizonlogistics.com>",
+    "subject": "Reimbursement reminder",
+    "body": "Please submit the reimbursement by Friday. Make sure receipts are legible and attached to the form.",
+    "received_at": "2026-03-01T09:30:00"
+  },
+  {
+    "id": "email_028",
+    "sender": "Peter Nguyen <peter@vertexcreative.com>",
+    "subject": "Webinar confirmation",
+    "body": "Please confirm attendance for the webinar next Monday. We'll send joining instructions after you confirm.",
+    "received_at": "2026-03-18T11:20:00"
+  },
+  {
+    "id": "email_029",
+    "sender": "Victoria Ross <victoria@securekart.com>",
+    "subject": "Review scheduling",
+    "body": "Let's schedule a review next Monday. ASAP works best - share a time that day.",
+    "received_at": "2026-03-21T19:05:00"
+  },
+  {
+    "id": "email_030",
+    "sender": "Aiden Parker <aiden@atlasforms.com>",
+    "subject": "Open tasks cleanup",
+    "body": "Take a look at the open tasks; please complete them by end of day today. Reply with a quick status once finished.",
+    "received_at": "2026-03-25T06:40:00"
+  },
+  {
+    "id": "email_031",
+    "sender": "Grace Turner <grace@brightworks.co>",
+    "subject": "Demo call scheduling",
+    "body": "Could you schedule a demo call tomorrow afternoon? I'll prepare the agenda and demo script ahead of time.",
+    "received_at": "2026-03-24T07:25:00"
+  },
+  {
+    "id": "email_032",
+    "sender": "Daniel Kim <daniel@teamflow.com>",
+    "subject": "Client status update",
+    "body": "Please update the client status by next Tuesday with current blockers and estimated timelines.",
+    "received_at": "2026-03-19T08:00:00"
+  }
+]
+
