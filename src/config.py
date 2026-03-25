@@ -47,16 +47,21 @@ def get_app_data_dir() -> Path:
     env = os.getenv("EMAIL_TO_TASK_DATA_DIR", "").strip()
     if env:
         return Path(env).expanduser().resolve()
-    # Writable default.
-    # Use a repo-local directory to avoid relying on home-directory permissions.
-    return (get_project_root() / "data_storage").resolve()
+    # Default to a user-writable directory (works locally and on Streamlit Cloud).
+    return (Path.home() / ".email_to_task").resolve()
 
 
 def get_db_path() -> Path:
     """Return the SQLite DB file path."""
     data_dir = get_app_data_dir()
-    data_dir.mkdir(parents=True, exist_ok=True)
-    return data_dir / "email_to_task.sqlite3"
+    try:
+        data_dir.mkdir(parents=True, exist_ok=True)
+        return data_dir / "email_to_task.sqlite3"
+    except OSError:
+        # Fallback for environments where home dir is restricted.
+        fallback = Path("/tmp") / "email_to_task"
+        fallback.mkdir(parents=True, exist_ok=True)
+        return fallback / "email_to_task.sqlite3"
 
 
 def ensure_db_connectivity(db_path: Path | None = None) -> None:
