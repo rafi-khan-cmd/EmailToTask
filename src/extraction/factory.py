@@ -39,8 +39,5 @@ def get_extractor(method: str | None = None) -> BaseExtractor:
             return RuleBasedExtractor()
         except Exception:
             return RuleBasedExtractor()
-    if m in {"llm"}:
-        # Future: implement `LLMExtractor` in `src/extraction/llm_extractor.py`.
-        raise ValueError("LLM extractor not implemented in v1.")
     raise ValueError(f"Unknown extractor method: {method!r}")
 

@@ -163,7 +163,7 @@ This keeps UI, services, and DB logic unchanged.
 - Better multi-task extraction per email
 - Improved deadline phrase disambiguation
 - Optional hybrid rule+NLP confidence calibration
-- Optional LLM extractor (still behind `BaseExtractor`) without breaking architecture
+- Optional additional extractor strategies (still behind `BaseExtractor`) without breaking architecture
 
 ## Resume-ready Bullet Suggestions
 - Enhanced an email-to-task automation dashboard with spaCy-based NLP to extract action items, deadlines, and priorities from unstructured email text.
