@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import importlib
+import sys
 from functools import lru_cache
 
 from typing import Any
@@ -30,9 +32,19 @@ def get_nlp_model() -> Any:
     try:
         return spacy.load(SPACY_MODEL_NAME)
     except OSError as exc:
+        # Some environments install the model as a package that can be imported
+        # directly even when `spacy.load(name)` lookup fails.
+        try:
+            pkg = importlib.import_module(SPACY_MODEL_NAME)
+            if hasattr(pkg, "load"):
+                return pkg.load()
+        except Exception:
+            pass
         raise SpacyModelLoadError(
-            "spaCy English model is missing. Install it with:\n"
-            "python -m spacy download en_core_web_sm"
+            "spaCy English model is missing for this Python environment.\n"
+            f"Python executable in use: {sys.executable}\n"
+            "Install with:\n"
+            f"{sys.executable} -m spacy download en_core_web_sm"
         ) from exc
 
 
