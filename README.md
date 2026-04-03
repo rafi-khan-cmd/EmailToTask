@@ -165,19 +165,3 @@ This keeps UI, services, and DB logic unchanged.
 - Optional hybrid rule+NLP confidence calibration
 - Optional LLM extractor (still behind `BaseExtractor`) without breaking architecture
 
-## Resume-ready Bullet Suggestions
-- Enhanced an email-to-task automation dashboard with spaCy-based NLP to extract action items, deadlines, and priorities from unstructured email text.
-- Integrated date normalization using dateparser to convert human-readable deadline phrases into structured task metadata.
-- Designed a modular extractor architecture supporting both rule-based and NLP pipelines through a shared interface.
-- Implemented a human-in-the-loop review workflow to validate and correct ambiguous extraction outputs.
-- Built analytics and dashboard views to monitor extracted tasks, overdue items, and review-needed cases.
-
-## GitHub Project Description
-Deployable Streamlit app that transforms unstructured emails into structured tasks using dual extraction modes (rule-based + spaCy NLP). Includes dateparser-based deadline normalization, review queue corrections, SQLite persistence, and analytics dashboards.
-
-## Portfolio Description
-Built an NLP-enhanced productivity dashboard that extracts actionable tasks from email text. The system supports both deterministic and spaCy-powered extraction, normalizes date phrases with dateparser, and includes a human-in-the-loop review workflow for reliable operations.
-
-## 30-second Interview Explanation
-I upgraded an email-to-task automation app by adding a spaCy extractor alongside the original rule-based extractor, both behind a common interface. The NLP mode ranks task-like sentences, extracts action phrases, and normalizes deadlines with dateparser while preserving human review for ambiguous cases. This improved extraction quality without refactoring the rest of the app.
-
