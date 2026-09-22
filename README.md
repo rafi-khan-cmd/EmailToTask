@@ -78,10 +78,11 @@ project_root/
     extraction/
       base.py
       rule_based.py
+      patterns.py
       spacy_extractor.py
-      factory.py
       spacy_patterns.py
       spacy_utils.py
+      factory.py
       deadline_utils.py
       priority_utils.py
       task_utils.py
